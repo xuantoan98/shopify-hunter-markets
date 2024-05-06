@@ -1,0 +1,46 @@
+:root {
+  --logo-width-mobile: 151px;
+  --logo-height-mobile: 48px;
+  --logo-width-tablet: 500px;
+  --logo-width-desktop: 874px;
+  --logo-height-desktop: 60px;
+}
+
+.logo__link {
+  display: block;
+  width: 100%;
+}
+
+.logo__img {
+  width: 100%;
+}
+
+.logo__img--mobile {
+  @media (--sm) {
+    display: none;
+  }
+}
+
+.logo__img--desktop {
+  @media (--s-max) {
+    display: none;
+  }
+}
+
+.logo__img-image {
+  @mixin aspect 150, 48;
+
+  position: relative;
+
+  @media (--sm) {
+    @mixin aspect 874, 60;
+  }
+}
+
+.logo--menu-slideout {
+  & .logo__img-image {
+    @media (--s-max) {
+      @mixin aspect 134, 43;
+    }
+  }
+}

@@ -1,0 +1,110 @@
+@define-mixin button {
+  @mixin transition all;
+  display: inline-block;
+  min-width: 136px;
+  padding: 15px 16px;
+  text-align: center;
+  cursor: pointer;
+  border-style: solid;
+  border-width: 2px;
+}
+
+[type="submit"],
+[type="button"],
+[type="reset"],
+button {
+  @mixin reset-button;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+.button,
+.shopify-challenge__button {
+  @mixin button;
+  background: var(--c-button-primary-bg);
+  color: var(--c-button-primary-text);
+  border-color: var(--c-button-primary-border);
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &:hover {
+    color: var(--c-button-primary-hover-text);
+    text-decoration: none;
+    background: var(--c-button-primary-hover-bg);
+    border-color: var(--c-button-primary-hover-border);
+    box-shadow: none;
+  }
+
+  &:disabled {
+    background: var(--c-button-primary-disable-bg);
+    color: var(--c-button-primary-disable-text);
+    border-color: var(--c-button-primary-disable-border);
+  }
+}
+
+.button--secondary {
+  @mixin fw-semibold;
+  background: var(--c-button-secondary-bg);
+  color: var(--c-button-secondary-text);
+  border: 2px solid var(--c-button-secondary-border);
+
+  &:hover {
+    background: var(--c-button-secondary-hover-bg);
+    color: var(--c-button-secondary-hover-text);
+    border-color: var(--c-button-secondary-hover-border);
+  }
+
+  &:disabled {
+    background: var(--c-button-secondary-disable-bg);
+    color: var(--c-button-secondary-disable-text);
+    border-color: var(--c-button-secondary-disable-border);
+  }
+}
+
+.button--icon {
+  @mixin flex-horizontal;
+
+  padding: 13px 31px;
+
+  & svg {
+    width: 14px;
+    height: 16px;
+    margin-left: 6px;
+    margin-bottom: 2px;
+  }
+
+  & .button__image {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+  }
+}
+
+.button--footer-newsletter {
+  @mixin fit;
+  left: auto;
+  min-width: 0;
+  height: 48px;
+  padding: 13px 15px;
+  background: var(--c-pink);
+  border: none;
+
+  &:hover {
+    background: var(--c-pink);
+  }
+
+  & svg {
+    width: 18px;
+    height: 14px;
+    margin: 0;
+    color: var(--c-white);
+  }
+}

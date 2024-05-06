@@ -1,0 +1,3 @@
+@custom-media --checkout-mobile ( min-width: 750px);
+@custom-media --checkout-tablet (min-width: 1000px);
+@custom-media --checkout-large (min-width: 1280px);

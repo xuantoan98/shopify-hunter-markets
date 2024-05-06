@@ -1,0 +1,167 @@
+.section-header {
+  position: relative;
+  padding: 25px 0;
+  text-align: center;
+
+  @media (--ml) {
+    padding: 50px 0;
+  }
+}
+
+.section-header--related {
+  padding: 25px 0 17px;
+
+  @media (--ml) {
+    padding: 57px 0 32px;
+  }
+}
+
+.section-header--service {
+  margin-bottom: 0;
+  @media (--sm) {
+    padding-left: 25px;
+  }
+
+  & .section-header__inner {
+    @media (--ml) {
+      padding-right: 12px;
+      padding-left: 12px;
+    }
+  }
+}
+
+.section-header__inner {
+  position: relative;
+  padding-right: 15px;
+  color: var(--c-text);
+}
+
+
+.section-header--suggestions {
+  @media (--ml) {
+    margin-bottom: 16px;
+  }
+}
+
+.section-header--instagram {
+  padding: 0 0 9px;
+
+  @media (--sm) {
+    padding: 0 0 18px;
+  }
+
+  & .section-header__title {
+    @mixin headline;
+  }
+}
+
+.section-header--hero-two-up {
+  padding: 0;
+
+  & .section-header__inner {
+    padding-right: 0;
+  }
+
+  & .section-header__title {
+    @mixin headline-large-5;
+    @mixin fw-semibold;
+    margin-bottom: 15px;
+    color: var(--c-white);
+
+    @media (--ml) {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.section-header--home-pink-text {
+  padding-top: 30px;
+  padding-bottom: 48px;
+
+  @media (--ml) {
+    padding-top: 72px;
+    padding-bottom: 80px;
+  }
+
+  & .section-header__container {
+    padding: 0 24px;
+
+    @media (--ml) {
+      padding: 0 12px;
+    }
+  }
+
+  & .section-header__inner {
+    padding-right: 0;
+  }
+
+  & .section-header__content {
+    max-width: 866px;
+    margin: 0 auto;
+  }
+
+  & .section-header__title {
+    @mixin headline-large-4;
+    text-align: left;
+
+    @media (--ml) {
+      text-align: center;
+    }
+  }
+}
+
+.section-header--home-carousel {
+  padding: 0 0 13px;
+
+  @media (--ml) {
+    padding: 0 0 18px;
+  }
+
+  & .section-header__title {
+    @mixin headline-large;
+  }
+}
+
+.section-header--featured-carousel {
+  padding-top: 0;
+  padding-bottom: 17px;
+
+  @media (--ml) {
+    padding-bottom: 30px;
+  }
+
+  & .section-header__container {
+    @media (--ml) {
+      max-width: 743px;
+    }
+  }
+
+  & .section-header__inner {
+    padding: 0;
+  }
+
+  & .section-header__title {
+    @mixin headline-large-3;
+    color: var(--c-white);
+  }
+
+  & a {
+    display: block;
+  }
+}
+
+.section-header--related-product {
+  padding: 0 0 14px;
+
+  @media (--s) {
+    padding: 0 0 20px;
+  }
+
+  & .section-header__container {
+    padding: 0;
+  }
+
+  & .section-header__title {
+    text-align: left;
+  }
+}

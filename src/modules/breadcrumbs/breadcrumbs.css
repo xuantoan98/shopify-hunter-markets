@@ -1,0 +1,37 @@
+.breadcrumbs {
+  display: none;
+  padding-top: 10px;
+
+  @media (--ml) {
+    display: block;
+    margin-bottom: 24px;
+  }
+}
+
+.breadcrumbs--collection {
+  @media (--ml) {
+    margin-bottom: 26px;
+  }
+}
+
+.breadcrumbs__inner {
+  & a,
+  & span {
+    @mixin breadcrumbs-link;
+
+    text-decoration: none;
+  }
+}
+
+.breadcrumbs__icon {
+  width: 11px;
+  height: 7px;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.breadcrumbs--product {
+  @media (--ml) {
+    margin-bottom: 0;
+  }
+}

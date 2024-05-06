@@ -1,0 +1,7 @@
+.related-products {
+  padding: 12px 0 36px;
+
+  @media (--s) {
+    padding: 70px 0 72px;
+  }
+}

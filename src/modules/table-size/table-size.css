@@ -1,0 +1,38 @@
+.table-size {
+  overflow: auto;
+}
+
+.table-size__table {
+  min-width: 480px;
+  margin-bottom: 15px;
+  border-collapse: collapse;
+}
+
+.table-size__table {
+  width: 100%;
+  & th {
+    color: var(--c-white);
+    text-align: left;
+  }
+  & th,
+  & td {
+    border: 0 solid var(--c-border);
+    padding: 9px 18px;
+    &:first-child {
+      border-left-width: 1px;
+    }
+    &:last-child {
+      border-right-width: 1px;
+    }
+  }
+  & td {
+    border-bottom-width: 1px;
+    &.table-size__col--no-padding {
+      padding: 0;
+    }
+  }
+}
+
+.table-size__image {
+  @mixin aspect 547, 301;
+}

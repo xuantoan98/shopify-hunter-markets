@@ -1,0 +1,16 @@
+.blog {
+  padding-top: 20px;
+  padding-bottom: 36px;
+
+  @media (--ml) {
+    padding-top: 24px;
+    padding-bottom: 72px;
+  }
+}
+
+.blog__content {
+  @media (--ml) {
+    max-width: 904px;
+    margin: 0 auto;
+  }
+}

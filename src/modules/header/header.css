@@ -1,0 +1,147 @@
+:root {
+  --header-height: 72px;
+  --header-height-desktop: 132px;
+  --header-search-icon-width: 21px;
+  --header-search-icon-height: 21px;
+  --header-cart-icon-width: 26px;
+  --header-cart-icon-height: 24px;
+}
+
+.header {
+  @mixin fade-in;
+  @mixin transition border-bottom-color;
+
+  position: sticky;
+  top: var(--topbar-height);
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  border-bottom: 1px solid var(--c-pink-light-30);
+  transform: none;
+  z-index: 10;
+  background: var(--c-white);
+
+  @media (--sm) {
+    @mixin flex-vertical center, space-between;
+
+    top: var(--topbar-height-tablet);
+    height: var(--header-height-desktop);
+    padding-top: 14px;
+  }
+}
+
+.header__container {
+  @mixin flex-vertical;
+
+  position: relative;
+  width: 100%;
+  z-index: 11;
+
+  @media (--s-max) {
+    height: 100%;
+  }
+}
+
+.header__inner {
+  @mixin flex-horizontal center, space-between;
+  position: relative;
+  width: 100%;
+
+  @media (--sm) {
+    height: 60px;
+  }
+}
+
+.header__left {
+  @mixin flex-horizontal center, flex-start;
+}
+
+.header__center {
+  flex: 1 0 auto;
+}
+
+.header__right {
+  @mixin flex-horizontal center, flex-end;
+}
+
+.header__nav-btn {
+  position: relative;
+}
+
+.header__icon {
+  color: var(--c-pink);
+}
+
+.header__trigger-cart {
+  margin-left: 18px;
+}
+
+.header__search-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.header__cart-icon {
+  width: var(--header-cart-icon-width);
+  height: var(--header-cart-icon-height);
+  pointer-events: none;
+}
+
+.is-search-active {
+  & .header__inner {
+    @media (--sm) {
+      @mixin fade-out;
+    }
+  }
+}
+
+.header__mega-menu {
+  position: relative;
+  width: 100%;
+  z-index: 12;
+
+  @media (--sm) {
+    position: static;
+    z-index: 10;
+  }
+}
+
+.template-index {
+  & .header {
+    border-bottom-color: transparent;
+
+    &.is-sticky {
+      border-bottom-color: var(--c-pink-light-80);
+    }
+  }
+}
+
+
+
+.header__logo {
+  &:not(.header__logo--slideout) {
+    @mixin flex-horizontal;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: var(--logo-width-mobile);
+    height: var(--logo-height-mobile);
+    transform: translate(-50%, -50%);
+
+    @media (--sm) {
+      width: var(--logo-width-tablet);
+      height: var(--logo-height-desktop);
+    }
+
+    @media (--l) {
+      width: var(--logo-width-desktop);
+    }
+  }
+}
+
+.header__logo--slideout  {
+  max-width: 134px;
+  margin: 0 auto;
+  padding: 24px 0 38px;
+}

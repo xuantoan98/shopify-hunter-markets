@@ -1,0 +1,8 @@
+.social-sharing {
+  display: flex;
+
+  & svg[class*="icon-"] {
+    width: 24px;
+    height: 24px;
+  }
+}

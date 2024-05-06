@@ -1,0 +1,40 @@
+.payment-methods {
+  @mixin flex-horizontal center, space-around;
+}
+
+.payment-methods__payment-icon:not(:last-child) {
+  margin-right: 10px;
+}
+
+.payment-methods__payment-icon {
+  width: 48px;
+  margin: 10px 0;
+
+  @media (--ml) {
+    width: 52px;
+  }
+}
+
+.payment-methods--cart-layout {
+  @mixin flex-horizontal center, center, nowrap;
+  margin: 14px 0 0;
+
+  & .payment-methods__payment:not(:last-child) {
+    margin-right: 24px;
+  }
+
+  & .payment-methods__payment-icon {
+    width: 36px;
+
+    &.icon-paypal {
+      width: 46px;
+    }
+    &.icon-mastercard {
+      width: 20px;
+    }
+  }
+}
+
+.payment-methods__payment-image {
+  @mixin aspect 3, 1;
+}

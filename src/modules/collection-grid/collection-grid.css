@@ -1,0 +1,11 @@
+.collection-grid__wrapper {
+  padding: 14px 0 30px;
+
+  @media (--ml) {
+    padding: 28px 0 39px;
+  }
+}
+
+.collection-grid__header {
+  position: relative;
+}

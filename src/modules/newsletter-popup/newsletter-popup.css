@@ -1,0 +1,33 @@
+.newsletter-popup {
+  & .form__label--checkbox {
+    @media (--xs-max) {
+      &:before {
+        top: 6px;
+        transform: none;
+      }
+      &:after {
+        top: 12px;
+      }
+    }
+  }
+}
+
+.newsletter-popup__image {
+  @mixin aspect 1, 1;
+
+  @media (--ml) {
+    @mixin aspect 362, 474;
+  }
+}
+
+.newsletter-popup__form {
+  margin-top: 22px;
+
+  @media (--ml) {
+    margin-top: 26px;
+  }
+}
+
+.newsletter-popup__title {
+  margin-bottom: 14px;
+}

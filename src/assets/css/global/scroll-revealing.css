@@ -1,0 +1,25 @@
+[data-reveal-order] {
+  transition:
+    opacity 0.6s ease-out,
+    transform 0.6s ease-out;
+}
+
+[data-reveal*="fade"] {
+  & [data-reveal-order] {
+    opacity: 0;
+
+    &.is-revealed {
+      opacity: 1;
+    }
+  }
+}
+
+[data-reveal*="up"] {
+  & [data-reveal-order] {
+    transform: translate3d(0, 50px, 0);
+
+    &.is-revealed {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+}

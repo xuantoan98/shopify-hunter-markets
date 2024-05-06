@@ -1,0 +1,42 @@
+.more__after {
+  transition: height 300ms ease-in-out;
+  overflow: hidden;
+
+  > p:first-child {
+    margin-top: 0;
+  }
+
+  &:empty {
+    & + .more__button {
+      display: none;
+    }
+  }
+}
+
+.more--home-instagram {
+  & .more__before {
+    max-width: 272px;
+    margin: 12px auto 0;
+    text-align: center;
+    color: var(--c-black-light-20);
+
+    @media (--sm) {
+      margin: 23px auto 0;
+      max-width: inherit;
+    }
+
+    & p {
+      @mixin paragraph-intro;
+    }
+
+    & a {
+      @mixin text-inherit;
+      color: var(--c-pink);
+      text-decoration: none;
+
+      &:hover {
+        color: var(--c-link-hover);
+      }
+    }
+  }
+}

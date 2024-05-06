@@ -1,0 +1,29 @@
+.social-media {
+  margin-top: 36px;
+}
+
+.social-media__content {
+  @mixin flex-horizontal center, flex-start;
+}
+
+.social-media__item {
+  margin-right: 14px;
+}
+
+.social-media__link {
+  display: inline-block;
+}
+
+.social-media__icon {
+  width: 24px;
+  height: 24px;
+}
+
+.social-media--modal {
+  margin-top: 20px;
+}
+
+.social-media__icon--globe {
+  width: 22px;
+  height: 22px;
+}

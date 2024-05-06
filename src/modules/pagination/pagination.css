@@ -1,0 +1,97 @@
+.pagination {
+  @mixin flex-horizontal center, center;
+  width: 100%;
+  margin-top: 32px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (--ml) {
+    margin-top: 70px;
+  }
+
+  & a {
+    @mixin anchor-decoration-none;
+
+    display: block;
+    width: 100%;
+    min-width: 16px;
+    color: var(--c-black-light-20);
+  }
+
+  & .page,
+  & .deco,
+  & .prev,
+  & .next {
+    position: relative;
+    width: 16px;
+    margin: 0 8px;
+    padding-bottom: 5px;
+    text-align: center;
+  }
+
+  & .deco {
+    @mixin flex-horizontal;
+  }
+
+  & .current {
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--c-pink);
+    }
+  }
+
+  & .prev,
+  & .next {
+    & a {
+      @mixin flex-horizontal;
+
+      color: var(--c-black-light-30);
+    }
+  }
+
+  & .prev {
+    & .pagination__icon {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.pagination--hidden {
+  display: none;
+}
+
+.pagination__icon {
+  width: 7px;
+  height: 13px;
+  color: var(--c-black-light-30);
+  pointer-events: none;
+
+  &:after {
+    border-color: var(--c-border);
+  }
+}
+
+.pagination__list {
+  @mixin flex-horizontal;
+
+  & > span {
+    @mixin flex-horizontal;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.pagination--blog {
+  margin-top: 0;
+}
+
+.pagination--collection {
+  margin-top: 19px;
+}

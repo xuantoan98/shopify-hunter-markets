@@ -1,0 +1,413 @@
+@define-mixin h1 {
+  @type 30px 30px -0.5px;
+}
+
+@define-mixin h2 {
+  @type 24px 26px -0.5px;
+}
+
+@define-mixin h3 {
+  @type 18px 20px -0.5px;
+}
+
+@define-mixin h4 {
+  @type 14px 16px 0;
+}
+
+@define-mixin h5 {
+  @type 13px 15px;
+}
+
+@define-mixin h6 {
+  @type 13px 15px;
+}
+
+@define-mixin text-inherit {
+  font: inherit;
+  color: inherit;
+  background: inherit;
+  text-decoration: inherit;
+  text-transform: inherit;
+
+  &:hover {
+    text-decoration: inherit;
+    color: inherit;
+  }
+}
+
+.text-inherit {
+  @mixin text-inherit;
+}
+
+@define-mixin uppercase {
+  text-transform: uppercase;
+}
+
+@define-mixin fw-light {
+  font-weight: 300;
+}
+
+@define-mixin fw-regular {
+  font-weight: 400;
+}
+
+@define-mixin fw-medium {
+  font-weight: 500;
+}
+
+@define-mixin fw-semibold {
+  font-weight: 600;
+}
+
+@define-mixin fw-bold {
+  font-weight: 700;
+}
+
+@define-mixin fw-extrabold {
+  font-weight: 800;
+}
+
+@define-mixin paragraph-small {
+  @type 14px 18px;
+}
+
+@define-mixin paragraph-small-1 {
+  @type 14px 18px;
+  @type --ml 16px 20px;
+}
+
+@define-mixin paragraph-small-2 {
+  @type 16px 19px;
+}
+
+@define-mixin paragraph {
+  @type 14px 20px;
+
+  font-family: var(--font-sans);
+  font-weight: 400;
+  color: var(--c-text);
+}
+
+@define-mixin paragraph-intro {
+  @type 16px 24px;
+}
+
+@define-mixin paragraph-large {
+  @type 15px 20px;
+  @type --ml 15px 18px;
+
+  font-family: var(--font-heading);
+  font-weight: 600;
+}
+
+@define-mixin paragraph-large-1 {
+  @type 16px 20px;
+}
+
+@define-mixin paragraph-large-2 {
+  @type 20px 24px 0;
+  @type --ml 24px 30px;
+}
+
+@define-mixin paragraph-large-3 {
+  @type 24px 30px;
+}
+
+@define-mixin paragraph-large-4 {
+  @type 26px 26px;
+}
+
+@define-mixin paragraph-large-5 {
+  @type 18px 24px;
+}
+
+@define-mixin paragraph-large-6 {
+  @type 15px 30px;
+}
+
+@define-mixin paragraph-large-7 {
+  @type 18px 24px;
+  @type --sm 24px 28px;
+}
+
+@define-mixin link {
+  @type 14px 20px 0;
+
+  font-family: var(--font-sans);
+  color: var(--c-link);
+}
+
+@define-mixin anchor-decoration {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@define-mixin anchor-decoration-none {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+@define-mixin badge {
+  @type 11px 16px;
+}
+
+@define-mixin label--small {
+  @type 10px 12px;
+
+  font-weight: 500;
+}
+
+@define-mixin label--small-1 {
+  @type 12px 12px 0;
+
+  font-family: var(--font-heading);
+  font-weight: 600;
+}
+
+@define-mixin label {
+  @type 14px 20px;
+}
+
+@define-mixin label-focus {
+  @type 10px 13px;
+}
+
+@define-mixin form-input {
+  @type 13px 20px;
+}
+
+@define-mixin button {
+  @type 14px 14px;
+
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+@define-mixin notice-message {
+  @type 14px 16px;
+
+  font-weight: 500;
+}
+
+@define-mixin notice-message-default {
+  @type 14px 17px;
+}
+
+@define-mixin breadcrumbs-link {
+  @type 11px 13px;
+}
+
+@define-mixin headline-smal {
+  @type 18px 20px -0.5px;
+  @type --ml 24px 26px -0.5px;
+
+  font-family: var(--font-heading);
+  font-weight: 500;
+  text-align: center;
+}
+
+@define-mixin headline {
+  @type 24px 24px 0;
+  @type --ml 30px 30px -0.5px;
+
+  font-family: var(--font-heading);
+  font-weight: 500;
+  text-align: center;
+}
+
+@define-mixin headline-large {
+  @type 24px 24px -0.5px;
+  @type --ml 30px 30px -0.5px;
+
+  font-family: var(--font-heading);
+  font-weight: 500;
+  text-align: center;
+}
+
+@define-mixin headline-large-1 {
+  @type 24px 24px -0.5px;
+  @type --ml 30px 30px -0.5px;
+
+  font-family: var(--font-heading);
+  font-weight: 600;
+  text-align: center;
+}
+
+@define-mixin headline-large-2 {
+  @type 24px 26px -0.5px;
+  @type --ml 30px 30px -0.5px;
+
+  font-family: var(--font-heading);
+  font-weight: 500;
+  text-align: center;
+}
+
+@define-mixin headline-large-3 {
+  @type 30px 30px -0.5px;
+  @type --ml 48px 44px -0.5px;
+
+  font-family: var(--font-heading);
+  font-weight: 800;
+  text-align: center;
+}
+
+@define-mixin headline-large-4 {
+  @type 42px 40px 0;
+  @type --ml 60px 54px 0;
+
+  font-family: var(--font-heading);
+  font-weight: 800;
+}
+
+@define-mixin headline-large-5 {
+  @type 24px 24px -0.5px;
+  @type --ml 30px 28px -0.5px;
+
+  font-family: var(--font-heading);
+}
+
+@define-mixin headline-large-6 {
+  @type 24px 48px -0.5px;
+
+  font-family: var(--font-heading);
+  font-weight: 400;
+}
+
+@define-mixin headline-large-7 {
+  @type 24px 26px -0.5px;
+  @type --ml 36px 30px -0.5px;
+
+  font-family: var(--font-heading);
+  font-weight: 500;
+  text-align: center;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  color: var(--c-heading);
+  text-transform: uppercase;
+}
+
+h1,
+.h1 {
+  @mixin h1;
+}
+
+h2,
+.h2 {
+  @mixin h2;
+}
+
+h3,
+.h3,
+.accordion__label {
+  @mixin h3;
+}
+
+h4,
+.h4 {
+  @mixin h4;
+  font-weight: 600;
+}
+
+h5,
+.h5 {
+  @mixin h5;
+
+  font-family: var(--font-heading);
+  color: var(--c-heading);
+}
+
+h6,
+.h6 {
+  @mixin h6;
+
+  font-family: var(--font-heading);
+  color: var(--c-heading);
+}
+
+@define-mixin font-heading {
+  font-family: var(--font-heading);
+}
+
+p,
+.p,
+.p a,
+.p p,
+body {
+  @mixin paragraph;
+}
+
+.paragraph-intro {
+  @mixin paragraph-intro;
+}
+
+a,
+.link,
+.wysiwyg a,
+.p a,
+p a {
+  @mixin link;
+  @mixin transition color;
+
+  text-decoration: underline;
+
+  &:hover {
+    color: var(--c-link-hover);
+  }
+}
+
+.link--inline {
+  text-decoration: underline;
+}
+
+.label {
+  @mixin label;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.form-input,
+.input,
+.textarea,
+.select,
+.label
+.checkbox,
+.radio {
+  @mixin form-input;
+}
+
+.button {
+  @mixin button;
+}
+
+.headline {
+  @mixin headline;
+}
+
+.footer-main-copyright {
+  @media (--ml) {
+    font-style: italic;
+  }
+}

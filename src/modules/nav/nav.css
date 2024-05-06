@@ -1,0 +1,10 @@
+.nav {
+  @mixin fit-x;
+  @mixin fade-down .is-nav-active;
+  display: none;
+  z-index: 1;
+  top: var(--header-height);
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--c-border);
+  background: var(--c-white);
+}

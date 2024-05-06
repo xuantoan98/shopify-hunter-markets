@@ -1,0 +1,32 @@
+.cms-gallery {
+  margin-top: 18px;
+  margin-bottom: 0;
+
+  @media (--sm) {
+    margin-top: 24px;
+    margin-bottom: 6px;
+  }
+
+  @media (--ml) {
+    margin-top: 30px;
+  }
+}
+
+.cms-gallery__img {
+  @mixin fit;
+}
+
+.cms-gallery__item-inner {
+  @mixin aspect 352, 288;
+  position: relative;
+  margin-bottom: 12px;
+
+  @media (--sm) {
+    margin-bottom: 18px;
+  }
+
+  @media (--ml) {
+    @mixin aspect 440, 360;
+    margin-bottom: 20px;
+  }
+}

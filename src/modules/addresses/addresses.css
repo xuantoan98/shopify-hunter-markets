@@ -1,0 +1,53 @@
+.address-item {
+  width: 100%;
+}
+
+.address-item:not(:first-child) {
+  margin-top: 20px;
+}
+
+.list-addresses {
+  @mixin flex-vertical flex-start, flex-start;
+}
+
+.address-item--default {
+  order: -1;
+
+  &:not(:first-child) {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.button-add-address {
+  min-width: 150px;
+  margin-right: 16px;
+}
+
+.address-item__name {
+  color: var(--c-black);
+  margin-bottom: 4px;
+}
+
+.address-item__content {
+  margin-bottom: 10px;
+
+  & p {
+    color: var(--c-black);
+  }
+}
+
+.address-item__buttons {
+  & a {
+    text-decoration: underline;
+
+    & + a {
+      margin-left: 11px;
+    }
+  }
+}
+
+.address-item__buttons-divider {
+  margin: 0 5px;
+  color: var(--c-border);
+}

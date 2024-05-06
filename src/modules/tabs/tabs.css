@@ -1,0 +1,171 @@
+.tabs__list {
+  @mixin flex-horizontal;
+  border-bottom: 1px solid var(--c-border);
+}
+
+.tabs__button {
+  position: relative;
+  height: 60px;
+  width: auto;
+  max-width: 160px;
+  padding: 0 30px;
+
+  &.is-active {
+    &:after {
+      transform: scaleY(1);
+    }
+  }
+
+  &:after {
+    @mixin transition transform;
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 3px;
+    transform: scaleY(0);
+    transform-origin: 0 100%;
+    background: var(--c-button-primary-border);
+  }
+}
+
+.tabs__panels {
+  @mixin transition height;
+  position: relative;
+}
+
+.tabs__select-wrapper {
+  margin-bottom: 16px;
+}
+
+.tabs__panel {
+  animation: tab-leave var(--transition-duration) var(--transition-timing) forwards;
+  animation-play-state: running;
+
+  &.is-active {
+    animation: tab-enter var(--transition-duration) var(--transition-timing) forwards;
+    animation-play-state: running;
+  }
+
+  &.has-entered {
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+  }
+
+  &.has-left {
+    position: absolute;
+    visibility: hidden;
+    z-index: -1;
+  }
+
+  &.has-modal {
+    position: relative;
+  }
+}
+
+.tabs--custom {
+  & .tabs__panel {
+    margin: 0;
+  }
+
+  & .tabs__list {
+    @media (--m-max) {
+      display: none;
+    }
+  }
+
+  & .tabs__panels {
+    @media (--m-max) {
+      overflow: visible;
+    }
+  }
+
+  & .tabs__panel {
+    &:not(.is-active) {
+      @media (--m-max) {
+        animation: none;
+      }
+    }
+
+    @media (--m-max) {
+      border-top: 1px solid var(--c-border);
+
+      &:last-child {
+        border-bottom: 1px solid var(--c-border);
+      }
+    }
+  }
+
+  & .tabs__button {
+    width: auto;
+    height: unset;
+    margin: 0 16px;
+    padding-bottom: 16px;
+    color: var(--c-link);
+
+    &.is-active {
+      color: var(--c-link-active);
+    }
+  }
+}
+
+.tabs--page-modules {
+  & h3 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  & > .tabs__panel {
+    margin: 48px auto;
+  }
+}
+
+@keyframes tab-enter {
+  0% {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  50% {
+    opacity: 0;
+    visibility: hidden;
+    position: static;
+  }
+
+  100% {
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+  }
+}
+
+@keyframes tab-leave {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  50% {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  100% {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+  }
+}

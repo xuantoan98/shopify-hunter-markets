@@ -1,0 +1,39 @@
+.cart-trigger {
+  @mixin reset-button;
+  position: relative;
+  display: block;
+  width: auto;
+  text-align: left;
+  cursor: pointer;
+
+  @media (--m-max) {
+    margin-left: 10px;
+  }
+}
+
+.cart-trigger__count {
+  position: absolute;
+  top: -2px;
+  right: -10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  color: var(--c-white);
+  background: var(--c-gray);
+}
+
+.cart-trigger__button {
+  position: relative;
+  display: block;
+}
+
+.cart-trigger__button--empty {
+  width: auto;
+
+  & .cart-trigger__count {
+    display: none;
+  }
+}

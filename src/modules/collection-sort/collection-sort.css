@@ -1,0 +1,47 @@
+.collection-sort {
+  @mixin flex-horizontal center, flex-end, nowrap;
+
+  position: relative;
+  margin-top: 8px;
+
+  @media (--ml) {
+    position: absolute;
+    top: -19px;
+    right: 0;
+    margin: 0;
+  }
+}
+
+.collection-sort__count {
+  @media (--s-max) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.collection-layout__filter,
+.collection-layout__filter-current,
+.collection-layout__filter-wrapper {
+  height: 100%;
+}
+
+.collection-layout__filter-current {
+  @mixin flex-horizontal;
+  pointer-events: none;
+  margin-right: 10px;
+
+  @media (--ml) {
+    display: none;
+  }
+}
+
+.collection-layout__filter-label {
+  display: none;
+
+  @media (--ml) {
+    display: block;
+    margin-right: 4px;
+  }
+}

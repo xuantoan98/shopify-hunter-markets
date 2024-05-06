@@ -1,0 +1,20 @@
+.btn {
+  @mixin button;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: var(--c-button-primary-bg);
+  color: var(--c-white);
+  &:hover {
+    opacity: 0.5;
+    color: var(--c-white);
+  }
+}
+
+.boxshadow {
+  & .btn:focus,
+  & .btn:active,
+  & .btn-secondary:focus,
+  & .btn-secondary:focus {
+    box-shadow: none;
+  }
+}

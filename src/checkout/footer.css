@@ -1,0 +1,22 @@
+.main__footer {
+  margin-top: 30px;
+  padding-top: 20px;
+  padding-bottom: 25px;
+  border-top: 1px solid var(--c-border);
+
+  @media (--checkout-tablet) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: calc(100% - 50px);
+  }
+
+  & .copyright-text {
+    margin-bottom: 0;
+  }
+}
+
+.copyright-text {
+  @type 13px 22px;
+  margin: 0;
+}

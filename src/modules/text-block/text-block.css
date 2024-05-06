@@ -1,0 +1,32 @@
+.text-block {
+  padding-top: 30px;
+  padding-bottom: 34px;
+
+  @media (--ml) {
+    padding: 32px 20px 32px 40px;
+    border: 1px solid var(--c-border);
+  }
+}
+
+.text-block__item {
+  margin-top: 32px;
+
+  @media (--ml) {
+    margin-top: 40px;
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.text-block__title {
+  margin-bottom: 10px;
+  color: var(--c-white);
+}
+
+.text-block__description {
+  & a {
+    color: var(--c-link);
+  }
+}

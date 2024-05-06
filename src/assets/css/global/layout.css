@@ -1,0 +1,41 @@
+.wrapper{
+  @mixin flex-vertical;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+
+  & > * {
+    width: 100%;
+  }
+}
+
+.main {
+  @mixin transition all;
+  min-height: calc(100vh - (var(--header-height) + var(--topbar-height) + 550px));
+  background: var(--c-white);
+
+  @media (--ml) {
+    min-height: calc(100vh - (var(--header-height-desktop) + var(--topbar-height-tablet) + 550px));
+  }
+}
+
+.section {
+  padding-top: 20px;
+  @nest .main :first-child & {
+    padding-top: 0;
+  }
+}
+
+.shopify-challenge__container {
+  padding: 50px 0;
+}
+
+#preview-bar-iframe {
+  height: 60px;
+}
+
+.template-404,
+.template-cart {
+  & .main {
+    @mixin flex-vertical;
+  }
+}

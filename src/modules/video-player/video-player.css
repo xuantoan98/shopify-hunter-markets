@@ -1,0 +1,45 @@
+.video-player {
+  padding: 25px 0;
+
+  @media (--ml) {
+    padding: 0 0 50px;
+  }
+}
+
+.video-player__video {
+  @mixin fit;
+  width: 100%;
+  height: 100%;
+  background: var(--c-black);
+  overflow: hidden;
+
+  &:focus {
+    outline: none;
+  }
+
+  & iframe,
+  & object,
+  & embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.video-player__content,
+.video-player__thumbnail-image {
+  @mixin aspect 752, 660;
+  position: relative;
+
+  @media (--sm) {
+    @mixin aspect 1240, 600;
+  }
+}
+
+.video-player--home-hero {
+  & .video-player__video {
+    @mixin ratio-wrapper-hero;
+  }
+}

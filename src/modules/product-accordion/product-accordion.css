@@ -1,0 +1,28 @@
+.product-accordion {
+  margin-top: 20px;
+  text-align: left;
+  border-top: 1px solid var(--c-pink-light-30);
+
+  @media (--ml) {
+    margin-bottom: 0;
+  }
+
+  & .accordion__label {
+    border-bottom: 1px solid var(--c-pink-light-30);
+  }
+}
+
+.product-accordion--desktop {
+  display: none;
+  @media (--ml) {
+    display: block;
+    width: percentage(280/1240);
+  }
+}
+
+.product-accordion--mobile {
+  display: block;
+  @media (--ml) {
+    display: none;
+  }
+}

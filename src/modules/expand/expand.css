@@ -1,0 +1,34 @@
+.expand__content {
+  overflow: hidden;
+}
+
+.expand__icon {
+  @mixin transition transform;
+}
+
+.is-expanded {
+  & .expand__icon {
+    transform: scaleY(1);
+  }
+
+  & .expand__icon-plus {
+    &:after {
+      display: none;
+    }
+  }
+
+  & .icon-plus {
+    &:after {
+      transform: translate3d(-50%, 0, 0) rotate(90deg);
+    }
+  }
+}
+
+.expand__content-icon {
+  position: absolute;
+  left: 16px;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  color: var(--c-gray);
+}

@@ -1,0 +1,18 @@
+.product-quick-view {
+  width: 100%;
+}
+
+.product-quick-view__button {
+  @mixin transition;
+  width: 100%;
+  min-width: 0;
+  padding: 11px 35px;
+  background: var(--c-white);
+  color: var(--c-text);
+  border: 1px solid var(--c-border);
+}
+
+.product-quick-view__icon {
+  width: 15px;
+  height: 15px;
+}

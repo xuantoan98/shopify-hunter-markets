@@ -1,0 +1,16 @@
+.product-header {
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--c-pink-light-30);
+}
+
+.product-header--mobile {
+  @media (--ml) {
+    display: none;
+  }
+}
+
+.product-header--desktop {
+  @media (--m-max) {
+    display: none;
+  }
+}

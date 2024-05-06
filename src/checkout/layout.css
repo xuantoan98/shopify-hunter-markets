@@ -1,0 +1,32 @@
+.grid {
+  width: 100%;
+}
+
+.main {
+  width: 100%;
+  border-right: 0;
+  @media (--checkout-tablet) {
+    position: relative;
+    width: 50%;
+    padding-right: 50px;
+    border-right: 1px solid var(--c-border);
+  }
+}
+
+.page--no-banner .main {
+  padding-top: 20px;
+  @media (--checkout-tablet) {
+    padding-top: 40px;
+  }
+}
+
+.main__content {
+  padding-bottom: 0;
+  @media (--checkout-tablet) {
+    margin-bottom: 98px;
+  }
+}
+
+.anyflexbox .main__content {
+  flex: none;
+}

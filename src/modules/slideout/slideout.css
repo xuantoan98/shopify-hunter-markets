@@ -1,0 +1,165 @@
+:root {
+  --slideout-header-width: 330px;
+}
+
+.slideout {
+  @mixin fit-fixed;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.slideout__close {
+  display: inline-block;
+
+  &:before,
+  &:after {
+    width: 100%;
+    background: var(--c-black);
+  }
+}
+
+.slideout__overlay {
+  @mixin fit;
+  background: rgba(0,0,0,.1);
+  z-index: 1;
+}
+
+.slideout__wrapper {
+  @mixin transition transform;
+  position: relative;
+  max-width: 375px;
+  height: 100%;
+  transform: translateX(-100%);
+  background: var(--c-white);
+  z-index: 2;
+  overflow: auto;
+}
+
+.slideout__inner {
+  z-index: 9999;
+  overflow: auto;
+}
+
+.slideout__button {
+  @mixin reset-button;
+  position: absolute;
+  top: 21px;
+  right: 18px;
+  display: flex;
+  align-items: center;
+  z-index: 102;
+
+  & path {
+    fill: var(--c-black);
+  }
+}
+
+.slideout__close {
+  width: 10px;
+  height: 10px;
+}
+
+.slideout--right {
+  @mixin flex-horizontal flex-start, flex-end;
+
+  & .slideout__wrapper {
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+.slideout--header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+
+  @media (--ml) {
+    position: static;
+    height: initial;
+    top: initial;
+    flex: 1 0 auto;
+    opacity: 1;
+    z-index: 1;
+    pointer-events: initial;
+  }
+
+  & .slideout__wrapper {
+    max-width: var(--slideout-header-width);
+    overflow: hidden;
+
+    @media (--ml) {
+      max-width: initial;
+      transform: none;
+      overflow: initial;
+      position: static;
+    }
+  }
+
+  & .slideout__overlay {
+    top: 0;
+    background: var(--c-bg-header-overlay);
+
+    @media (--ml) {
+      top: initial;
+      display: none;
+    }
+  }
+
+  & .slideout__button {
+    position: absolute;
+    top: 40px;
+    right: 24px;
+
+    & svg {
+      width: 12px;
+      height: 12px;
+      color: var(--c-pink);
+    }
+  }
+
+  & .slideout__button-text {
+    display: block;
+  }
+
+  & .slideout__inner {
+    height: 100%;
+    padding-top: 105px;
+    background-color: var(--c-gray-light-95);
+    -webkit-overflow-scrolling: touch;
+
+    @media (--ml) {
+      height: auto;
+      padding: 0;
+      border-top: 0;
+    }
+  }
+
+  & .slideout__header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background: var(--c-white);
+  }
+}
+
+.slideout--transparent {
+  background: transparent;
+
+  &.slideout--active {
+    background: transparent;
+  }
+}
+
+.slideout--active {
+  background: var(--c-white);
+  z-index: 99;
+  pointer-events: visible;
+
+  & .slideout__wrapper {
+    transform: translateX(0);
+  }
+}

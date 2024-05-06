@@ -1,0 +1,9 @@
+.banner--show {
+  display: block !important;
+  padding: 30px 0;
+  text-align: center;
+  border-bottom: 1px solid var(--c-border);
+  & img {
+    max-width: 198px;
+  }
+}

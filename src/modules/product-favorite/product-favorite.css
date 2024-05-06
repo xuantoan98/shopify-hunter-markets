@@ -1,0 +1,13 @@
+.product-favorite__inner {
+  margin: 13px 0;
+}
+
+.product-favorite__button--wishlist {
+  display: flex;
+}
+
+.product-favorite__button-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+}

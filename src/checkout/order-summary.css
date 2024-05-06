@@ -1,0 +1,63 @@
+.order-summary__sections {
+  @media (--checkout-tablet) {
+    height: auto;
+  }
+}
+
+
+.order-summary__section--product-list {
+  padding-bottom: 12px;
+}
+
+.order-summary__section {
+  padding-top: 20px;
+  border-color: var(--c-border);
+}
+
+.order-summary__section--discount {
+  padding-bottom: 8px;
+}
+
+.sidebar {
+  & .order-summary__emphasis,
+  & .payment-due__price {
+    color: var(--c-text);
+  }
+}
+
+.total-recap__final-price,
+.order-summary-toggle__text,
+.order-summary-toggle:hover .order-summary-toggle__text,
+.order-summary-toggle:focus .order-summary-toggle__text {
+ color: var(--c-black);
+}
+
+.order-summary-toggle:hover .order-summary-toggle__dropdown,
+.order-summary-toggle:focus .order-summary-toggle__dropdown {
+  fill: var(--c-black);
+}
+
+.order-summary-toggle__dropdown,
+.order-summary-toggle__icon,
+.order-summary-toggle:hover .order-summary-toggle__icon,
+.order-summary-toggle:focus .order-summary-toggle__icon {
+  fill: var(--c-black);
+}
+
+.order-summary__emphasis {
+  @type 13px 16px;
+  color: var(--c-text);
+}
+
+.sidebar .total-line-table__tbody+.total-line-table__footer .total-line td::before {
+  background-color: var(--c-border);
+}
+
+.payment-due__currency {
+  display: none;
+}
+
+.order-summary-toggle {
+  border-top: 0;
+  border-bottom: 1px solid var(--c-border);
+}

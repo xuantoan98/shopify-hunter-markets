@@ -1,0 +1,87 @@
+.notice {
+  @mixin transition all;
+  @mixin flex-horizontal center, space-between;
+  @mixin fade-out;
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  padding: 17px 16px 15px;
+  border-radius: 3px;
+  color: var(--c-white);
+  transform: translate3d(-50%, 100%, 0);
+  min-width: 300px;
+  width: auto;
+  z-index: 100;
+}
+
+.notice--active {
+  @mixin fade-in;
+  transform: translate3d(-50%, -30px, 0);
+}
+
+.notice__close-button {
+  @mixin flex-horizontal;
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  width: 12px;
+  height: 18px;
+  transform: translateY(-50%);
+}
+
+.notice__message {
+  @mixin notice-message;
+  position: relative;
+  flex: 0 1 auto;
+  padding-left: 26px;
+  padding-right: 20px;
+  text-align: left;
+
+  & * {
+    @mixin text-inherit;
+  }
+
+  & a {
+    display: inline-block;
+    text-decoration: underline;
+  }
+}
+
+.notice__icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  flex: 0 0 16px;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  color: var(--c-white);
+}
+
+.notice__icon-close {
+  width: 18px;
+  height: 18px;
+  color: var(--c-white);
+}
+
+.notice--inline {
+  @mixin fade-in;
+  position: relative;
+  top: auto;
+  left: auto;
+  width: 100%;
+  transform: translate3d(0, 0, 0);
+  z-index: 8;
+}
+
+.notice--success {
+  background-color: var(--c-success);
+}
+
+.notice--error {
+  background-color: var(--c-error);
+}
+
+.notice--default {
+  background-color: var(--c-default);
+}

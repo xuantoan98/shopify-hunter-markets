@@ -1,0 +1,9 @@
+.anchor-section--sticky {
+  position: sticky;
+  top: var(--header-height);
+  z-index: 3;
+
+  @media (--sm) {
+    top: calc(var(--header-height-tablet) + var(--topbar-height-tablet));
+  }
+}

@@ -1,0 +1,118 @@
+.instagram {
+  & #insta-feed,
+  & .instafeed-shopify {
+    @mixin grid-gutter 12px;
+    margin-top: 0 !important;
+
+    @media (--ml) {
+      @mixin grid-gutter 16px;
+    }
+
+    & img {
+      top: 50%;
+      width: calc(100% - 12px) !important;
+      height: calc(100% - 12px) !important;
+      transform: translateY(-50%);
+
+      @media (--ml) {
+        top: 0;
+        width: calc(100% - 16px) !important;
+        height: 100% !important;
+        transform: none;
+      }
+    }
+
+    & .instafeed-overlay {
+      width: calc(100% - 12px) !important;
+      height: calc(100% - 12px) !important;
+      top: 50%;
+      transform: translateY(-50%);
+
+      @media (--ml) {
+        top: 0;
+        width: calc(100% - 16px) !important;
+        height: 100% !important;
+        transform: none;
+      }
+
+      &:before {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    & .instafeed-container {
+      width: 50% !important;
+      padding-top: 50% !important;
+
+      @media (--ml) {
+        width: percentage(1/8) !important;
+        padding-top: calc(percentage(1/8) - 16px) !important;
+      }
+    }
+
+    & .instafeed-lightbox {
+      & .lightbox-instagram {
+        @media (--ml) {
+          height: 620px !important;
+        }
+      }
+      & img {
+        width: 100% !important;
+        height: auto !important;
+        top: 0;
+        transform: none;
+      }
+
+      & .image {
+        & img {
+          width: 100% !important;
+          height: 100% !important;
+        }
+      }
+
+      & video {
+        height: auto !important;
+      }
+
+      & .lightbox-instagram {
+        & .header {
+          top: 0;
+          border: 0
+        }
+
+        & .profile-picture {
+          width: 45px !important;
+          height: 45px !important;
+        }
+
+        & .description {
+          & .box-content {
+            & .sub-header {
+              & .arrows {
+                & img {
+                  width: 32px !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    & .image {
+      opacity: 1;
+    }
+  }
+}
+
+.instagram__wrapper {
+  @mixin flex-horizontal;
+}
+
+.instagram__inner {
+  width: 100%;
+}
+
+.instagram__container {
+  max-width: 100%;
+}

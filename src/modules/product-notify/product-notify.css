@@ -1,0 +1,29 @@
+.product-notify {
+  margin: 16px 0;
+  background-color: var(--c-gray);
+}
+
+.product-notify__title {
+  padding: 16px 0 14px;
+  color: var(--c-white);
+  text-align: center;
+}
+
+.product-notify__description {
+  padding-bottom: 10px;
+}
+
+.product-notify__button {
+  min-width: 132px;
+  padding: 14px 0 13px;
+  text-transform: uppercase;
+
+  @media (--l-max) {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+.product-notify__content {
+  padding: 17px 15px;
+}

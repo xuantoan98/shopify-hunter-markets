@@ -1,0 +1,43 @@
+@define-mixin container-page {
+  @media (--s-max) {
+    @mixin edge-padding var(--container-edge-page);
+  }
+}
+
+@define-mixin container-compact {
+  @media (--s-max) {
+    @mixin edge-padding var(--container-edge-compact);
+  }
+}
+
+.container {
+  @mixin edge-padding;
+  @mixin center-block;
+  box-sizing: border-box;
+  max-width: var(--container-max-width);
+
+  @media (--sm) {
+    @mixin edge-padding var(--container-edge-tablet);
+  }
+
+  @media (--ml) {
+    @mixin edge-padding var(--container-edge-desktop);
+  }
+}
+
+.container--page {
+  @mixin container-page;
+}
+
+.container--full {
+  @media (--sm) {
+    max-width: 100%;
+    padding-left: 24px;
+    padding-right: 24px;
+    margin: 0 auto;
+  }
+}
+
+.container--compact {
+  @mixin container-compact;
+}

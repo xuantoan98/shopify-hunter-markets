@@ -1,0 +1,38 @@
+.article__title {
+  @mixin headline-large-2;
+  @mixin fw-extrabold;
+  padding-top: 19px;
+
+  @media (--ml) {
+    padding-top: 39px;
+  }
+}
+
+.article__date {
+  margin-top: 6px;
+  text-align: center;
+}
+
+.article__content {
+  @media (--ml) {
+    max-width: 904px;
+    margin: 0 auto;
+  }
+}
+
+.article__button {
+  margin: 24px 0 36px;
+  text-align: center;
+
+  @media (--ml) {
+    margin: 42px 0 70px;
+  }
+
+  & .button {
+    min-width: 272px;
+  }
+
+  & .button--secondary {
+    padding: 15px 27px;
+  }
+}

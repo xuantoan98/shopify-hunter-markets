@@ -1,0 +1,30 @@
+/* Global Styles */
+:root {
+  --font-sans: "Rubik", Helvetica, Arial, sans-serif;
+  --font-heading: "Montserrat", Helvetica, Arial, sans-serif;
+  --font-serif: Georgia, "Times New Roman", Times, serif;
+}
+
+/* Parameters */
+:root {
+  /* Transitions */
+  --transition-duration: 400ms;
+  --transition-timing: ease-in-out;
+
+  /* Layout */
+  --container-edge: 18px;
+  --container-edge-tablet: 18px;
+  --container-edge-desktop: 12px;
+  --container-edge-compact: 12px;
+  --container-edge-page: 18px;
+  --container-max-width: 1264px;
+  --field-height: 48px;
+
+  /* Grid */
+  --grid-gutter-default: 16px;
+
+  --gutter-s: 6px;
+  --gutter-sm: 18px;
+  --gutter-ml: 24px;
+  --gutter-custom: 12px;
+}

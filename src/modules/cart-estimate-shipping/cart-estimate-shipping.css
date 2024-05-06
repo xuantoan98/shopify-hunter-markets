@@ -1,0 +1,21 @@
+.cart-estimate-shipping__field {
+  @mixin flex-horizontal center, space-between;
+}
+
+.cart-estimate-shipping__input {
+  flex: 1 0 auto;
+  padding-top: 3px;
+}
+
+.cart-estimate-shipping__button {
+  min-width: 96px;
+  margin-left: 16px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-width: 1px;
+}
+
+.cart-estimate-shipping__result {
+  min-height: 18px;
+  margin-top: 16px;
+}

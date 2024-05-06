@@ -1,0 +1,37 @@
+.expand-group {
+  @media (--sm) {
+    @mixin transition $(border-bottom-color, box-shadow);
+    position: relative;
+
+    &:before {
+      @mixin fit;
+      content: '';
+      display: block;
+      z-index: 3;
+      background-color: white;
+    }
+
+    &:after {
+      @mixin transition opacity;
+      @mixin fit-x;
+      z-index: 2;
+      bottom: -1px;
+      content: '';
+      display: block;
+      height: 1px;
+      background-color: var(--c-gray-light-70);
+      opacity: 0;
+      box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.6);
+    }
+  }
+}
+
+.expand-group__backdrop {
+  @mixin transition height;
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  bottom: 0;
+  transform: translateY(100%);
+  background: transparent;
+}

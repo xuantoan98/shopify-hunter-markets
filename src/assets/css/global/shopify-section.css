@@ -1,0 +1,92 @@
+.shopify-section {}
+
+.shopify-section--topbar {
+  position: sticky;
+  top: 0;
+  z-index: 9;
+}
+
+.shopify-section--home-text-module {
+  @media (--s-max) {
+    margin-bottom: 20px;
+  }
+
+  & .home-text-module--container {
+    @mixin edge-padding var(--container-edge-compact);
+
+    @media (--sm) {
+      max-width: 100%;
+      padding: 0;
+    }
+  }
+}
+
+.shopify-section--two-up {
+  & .hero-two-up__wrapper {
+    background: var(--c-pink-light-80);
+    padding: 36px 0;
+
+    @media (--ml) {
+      padding: 71px 0;
+    }
+  }
+}
+
+.shopify-section--home-blog {
+  margin: 20px 0;
+}
+
+.shopify-section--home-carousel {
+  overflow: hidden;
+  margin: 0 0 36px;
+
+  @media (--ml) {
+    margin: 0 0 72px;
+  }
+}
+
+.shopify-section--home-four-up {
+  margin: 34px 0 18px;
+
+  @media (--ml) {
+    margin: 70px 0 68px;
+  }
+}
+
+.shopify-section--featured-carousel {
+  padding: 31px 0 28px;
+  background: var(--c-pink-light-50);
+  overflow: hidden;
+
+  @media (--ml) {
+    padding: 66px 0 68px;
+  }
+
+  & .shopify-section__container {
+    @media (--ml) {
+      padding: 0 58px;
+    }
+  }
+}
+
+.shopify-section--hero-page {
+  & .hero--article {
+    margin-top: 23px;
+  }
+}
+
+.shopify-section--page-influencer {
+  padding: 20px 0 8px;
+
+  @media (--ml) {
+    padding: 36px 0 42px;
+  }
+}
+
+.shopify-section--home-instagram {
+  margin: 34px 0 18px;
+
+  @media (--ml) {
+    margin: 70px 0 68px;
+  }
+}

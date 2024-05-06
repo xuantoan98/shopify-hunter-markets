@@ -1,0 +1,17 @@
+@import "../modules/page-title/page-title.css";
+
+.page-title--checkout {
+  margin-bottom: 28px;
+  & .page-title__container {
+    padding: 0;
+  }
+
+  & .page-title__wrapper {
+    padding-top: 0;
+    padding-bottom: 20px;
+  }
+}
+
+.page-title--hidden {
+  display: none;
+}

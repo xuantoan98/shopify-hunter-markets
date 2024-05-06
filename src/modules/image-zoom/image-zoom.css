@@ -1,0 +1,31 @@
+.image-zoom {
+  position: relative;
+}
+
+.image-zoom__inner {
+  &:hover {
+    & .image-zoom__image {
+      @media (--ml) {
+        opacity: 0;
+      }
+    }
+
+    & .image-zoom__background {
+      @media (--ml) {
+        opacity: 1;
+        z-index: 2;
+      }
+    }
+  }
+}
+
+.image-zoom__background {
+  @mixin fit;
+  @mixin transition opacity;
+  opacity: 0;
+  z-index: 1;
+}
+
+.image-zoom__image {
+  @mixin transition opacity;
+}

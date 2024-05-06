@@ -1,0 +1,35 @@
+.product-carousel {
+  margin-bottom: 33px;
+  margin-top: 74px;
+  overflow-x: hidden;
+
+  @media (--ml) {
+    margin-bottom: 80px;
+    padding-top: 0;
+    border: 0;
+  }
+
+  & .flickity-prev-next-button {
+    display: none;
+
+    @media (--ml) {
+      display: block;
+    }
+  }
+
+  & .flickity-page-dots {
+    @media (--ml) {
+      display: none;
+    }
+  }
+}
+
+.product-carousel__title {
+  margin-bottom: 8px;
+  text-align: center;
+  color: var(--c-black);
+
+  @media (--ml) {
+    margin-bottom: 24px;
+  }
+}

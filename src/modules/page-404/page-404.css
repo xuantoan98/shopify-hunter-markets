@@ -1,0 +1,36 @@
+.page-404 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  padding: 70px 0;
+  @media (--ml) {
+    padding: 140px 0;
+  }
+}
+
+.page-404__inner {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  padding: 50px;
+  margin: 0 auto;
+  border: 1px solid var(--c-border);
+}
+
+.page-404__title {
+  margin-bottom: 14px;
+}
+
+.page-404__description {
+  margin-bottom: 15px;
+
+  @media (--ml) {
+    margin-bottom: 20px;
+  }
+
+  & p {
+    margin-bottom: 14px;
+  }
+}

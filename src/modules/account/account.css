@@ -1,0 +1,50 @@
+.account__content {
+  margin-top: 16px;
+
+  @media (--sm) {
+    margin-top: 29px;
+    margin-bottom: 145px;
+  }
+}
+
+.account__sidebar-link {
+  position: relative;
+  display: inline-block;
+  margin-top: 8px;
+
+  @media (--sm) {
+    margin-top: 5px;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--c-link);
+  }
+}
+
+.account__sidebar {
+  margin-bottom: 18px;
+}
+
+.account__sidebar-address {
+  margin-top: 18px;
+
+  @media (--sm) {
+    margin-top: 17px;
+  }
+}
+
+.account--information,
+.account--addresses,
+.account--order-details {
+  padding: 30px 0 50px;
+}
+
+.account__info-content {
+  margin-top: 30px;
+}

@@ -1,0 +1,13 @@
+.style-guide {
+  margin-bottom: 20px;
+  & .table-button {
+    width: auto;
+    & td {
+      padding: 0 5px 5px;
+
+      @media (--ml) {
+        padding: 0 20px 20px;
+      }
+    }
+  }
+}

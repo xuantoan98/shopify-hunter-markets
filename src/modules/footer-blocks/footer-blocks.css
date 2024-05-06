@@ -1,0 +1,28 @@
+.footer-blocks {
+  margin-bottom: 20px;
+  padding: 0;
+
+  @media (--ml) {
+    margin-bottom: 0;
+    border-top: 0;
+  }
+
+  & .footer-blocks__content {
+    @media (--ml) {
+      padding: 0;
+    }
+  }
+}
+
+.footer-blocks__item {
+  width: 100%;
+  padding: 0;
+
+  @media (--ml) {
+    width: percentage(1/3);
+  }
+}
+
+.footer-blocks__title {
+  margin-bottom: 16px;
+}

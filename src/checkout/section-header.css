@@ -1,0 +1,57 @@
+.main__header {
+  padding-bottom: 0;
+}
+
+.section__header {
+  margin-bottom: 17px;
+  & .section__text {
+    margin-top: 8px;
+    margin-bottom: 15px;
+  }
+}
+
+.section--contact-information {
+  & .section__header {
+    margin-bottom: 12px;
+  }
+}
+
+.section__title {
+  margin-top: 40px;
+  color: var(--c-text);
+}
+
+.main h2 {
+  color: var(--c-text);
+}
+
+.layout-flex--loose-horizontal {
+  & .section__title {
+    margin-top: 0;
+  }
+
+  & .section__title.layout-flex__item {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  & .layout-flex__item {
+    @type 13px 22px;
+    margin-bottom: 0;
+  }
+}
+
+.section--billing-address {
+  & .section__header {
+    margin-bottom: 17px;
+  }
+}
+
+.section--reductions {
+  & .section__title {
+    margin-top: 0;
+    @media (--checkout-tablet) {
+      margin-top: 40px;
+    }
+  }
+}

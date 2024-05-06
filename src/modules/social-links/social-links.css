@@ -1,0 +1,26 @@
+.social-links__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.social-links__link {
+  display: flex;
+}
+
+.social-links__icon {
+  width: 20px;
+  height: 20px;
+}
+
+.social-links--newsletter-mobile {
+  @media (--ml) {
+    display: none;
+  }
+}
+
+.social-links--newsletter-desktop {
+  display: none;
+
+  @media (--ml) {
+    display: flex;
+  }
+}

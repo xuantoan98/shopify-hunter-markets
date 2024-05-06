@@ -1,0 +1,21 @@
+.sidebar {
+  width: 100%;
+  padding-top: 40px;
+  @media (--checkout-tablet) {
+    width: 50%;
+    padding-left: 50px;
+    order: 2;
+  }
+
+  &:after {
+    background: transparent;
+    box-shadow: none;
+  }
+}
+
+.page--no-banner .sidebar {
+  padding-top: 0;
+  @media (--checkout-tablet) {
+    padding-top: 34px;
+  }
+}

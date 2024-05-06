@@ -1,0 +1,50 @@
+.quantity {
+  width: 120px;
+  height: 40px;
+
+  & .icon-minus,
+  & .icon-plus {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+.quantity__control {
+  @mixin flex-horizontal center, space-between;
+  width: 100%;
+  height: 42px;
+  border: 1px solid var(--c-black);
+  border-radius: 3px;
+}
+
+.quantity__button {
+  @mixin reset-button;
+  width: 33.33%;
+  height: 100%;
+  padding: 0;
+  cursor: pointer;
+  & span {
+    width: 10px;
+    height: 10px;
+    margin: 0 auto;
+  }
+}
+.quantity__input {
+  width: 33.33%;
+  height: 100%;
+  padding: 0;
+  text-align: center;
+  border: none;
+  &:focus,
+  &:invalid {
+    box-shadow: none;
+    outline: none;
+  }
+  &:disabled {
+    background: var(--c-white);
+  }
+}
+
+.quantity__message {
+  color: var(--c-error);
+}

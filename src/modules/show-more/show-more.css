@@ -1,0 +1,35 @@
+.show-more {
+  &:after {
+    content: 'show-more';
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+.show-more--mobile {
+  &:after {
+    content: '';
+  }
+
+  @media (--s-max) {
+    &:after {
+      content: 'show-more';
+    }
+  }
+}
+
+.show-more--video-list {
+  text-align: center;
+  overflow: hidden;
+
+  &::after {
+    display: none;
+  }
+}
+
+.show-more--moment {
+  @media (--m-max) {
+    padding-top: 8px;
+  }
+}
